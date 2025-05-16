@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Element Hider Pro</title>
+  <style>
+    body {
+      width: 320px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 10px;
+    }
+    
+    h2 {
+      margin-top: 0;
+      color: #333;
+      text-align: center;
+    }
+    
+    .controls {
+      margin-bottom: 15px;
+      display: flex;
+      gap: 10px;
+    }
+    
+    button {
+      background-color: #0060df;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    
+    button:hover {
+      background-color: #003eaa;
+    }
+    
+    button#clearAll {
+      background-color: #d70022;
+    }
+    
+    button#clearAll:hover {
+      background-color: #b1001c;
+    }
+    
+    .hidden-items {
+      max-height: 300px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 0;
+    }
+    
+    .hidden-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 10px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .hidden-item:last-child {
+      border-bottom: none;
+    }
+    
+    .selector-info {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 240px;
+    }
+    
+    .remove-btn {
+      background-color: #ffe0e0;
+      color: #d70022;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      padding: 4px 8px;
+    }
+    
+    .remove-btn:hover {
+      background-color: #ffd0d0;
+    }
+    
+    .no-items {
+      padding: 20px;
+      text-align: center;
+      color: #666;
+    }
+    
+    .status {
+      font-size: 12px;
+      color: #666;
+      margin-top: 10px;
+      text-align: center;
+    }
+</style>
+</head>
+<body>
+  <h2>Element Hider Pro</h2>
+  
+  <div class="controls">
+    <button id="activateSelector">Select Elements to Hide</button>
+    <button id="clearAll">Clear All Hidden</button>
+  </div>
+  
+  <h3>Hidden Elements</h3>
+  <div id="hiddenItems" class="hidden-items">
+    <div class="no-items">No elements hidden on this page</div>
+  </div>
+  
+  <div class="status">Hidden elements are specific to each page URL</div>
+
+  <div style="text-align:center; margin-top:16px;">
+    <a href="https://rupom.dev/element-hider/" target="_blank" style="color:#0060df; text-decoration:none; font-size:13px;">
+      &copy; Element Hider Pro
+    </a>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
